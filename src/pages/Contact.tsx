@@ -68,7 +68,7 @@ function ContactForm() {
               {' '}
               Tell me a bit more what you are looking for?
             </label>
-            <textarea id="NameInput" className="py-4 px-5 rounded-md bg-background1 text-primary border-1" type="text" rows="4" cols="50" placeholder="" name="description" value={form.description} onChange={HandleChange}></textarea>
+            <textarea id="NameInput" className="py-4 px-5 rounded-md bg-background1 text-primary border-1" rows={4} cols={50} placeholder="" name="description" value={form.description} onChange={HandleChange}></textarea>
           </div>
           <button type="submit" className="bg-gradient-to-r from-[#B16CEA] to-[#FF7B5D] rounded-full md:px-7 text-xl font-medium md:py-3 px-4 py-1">
             SUBMIT NOW
@@ -111,17 +111,17 @@ const Contact = () => {
     <>
       <Navbar />
       <div className=" bg-background1 text-white py-20 ">
-        <section className='scroll-reveal'>
+        <section className="scroll-reveal">
           <div className="  px-7 md:px-14 py-24 space-y-8 xl:w-[40%]">
             <InformationContact />
           </div>
         </section>
-        <section className='scroll-reveal'>
+        <section className="scroll-reveal">
           <div className=" px-7 md:px-14 ">
             <ContactForm />
           </div>
         </section>
-        <section className='scroll-reveal-left'>
+        <section className="scroll-reveal-left">
           <div className="px-7 md:px-14 py-20 md:py-28 lg:py-40   space-y-10">
             <FAQ />
           </div>
