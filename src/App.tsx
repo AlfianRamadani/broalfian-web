@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import Dashboard from './pages/Dashboard';
 import Post from './pages/Post';
 import Editor from './pages/Editor';
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/editor" element={<Editor />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      <Analytics />
     </Router>
   );
 }
