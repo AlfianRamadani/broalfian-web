@@ -58,7 +58,7 @@
 }
 
 .nav-link {
-  @apply relative;
+  @apply relative text-lg md:text-xl;
 }
 .nav-link::after {
   @apply content-[''] bg-blue-600 h-[3px] w-[0%] left-0 -bottom-[3px] absolute duration-500;
@@ -80,3 +80,28 @@
     @apply text-primary
   }
 }
+.scroll-reveal,
+.scroll-reveal-left,
+.scroll-reveal-right {
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+.scroll-reveal{
+  transform: translateY(20px);
+}
+
+.scroll-reveal-left {
+  transform: translateX(-50px);
+}
+
+.scroll-reveal-right {
+  transform: translateX(50px);
+}
+
+.scroll-reveal.visible,
+.scroll-reveal-left.visible,
+.scroll-reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+

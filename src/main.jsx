@@ -1,19 +1,14 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
-import './index.css'
-import ToggleBtn from './components/Button/toggleBtn.jsx'
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App';
+import './index.css';
+import ToggleBtn from './components/toggleBtn';
 
-// import  InfoProvider from './Context/InfoContext.jsx'
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  // <React.StrictMode>
-  <>
-  
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
     <div className="fixed bottom-8 right-8 md:right-16 z-50">
-    <ToggleBtn />
-  </div>
-  <App />
-  </>
-  // </React.StrictMode>
+      <ToggleBtn />
+    </div>
+    <App />
+  </StrictMode>
 );
